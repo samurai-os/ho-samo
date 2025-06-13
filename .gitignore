@@ -1,0 +1,12 @@
+# MacOS's specific files
+.DS_Store
+
+# C# project's binary files
+bin/
+obj/
+
+# appsettings.*.json files
+appsettings.*.json
+
+# log files
+logs/

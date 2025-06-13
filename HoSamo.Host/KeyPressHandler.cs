@@ -9,10 +9,10 @@ public static class KeyPressHandler
 {
     public static void Handle(HookEventArgs e)
     {
+        var hashCode = e.GetHashCode();
+
         try
         {
-            var hashCode = e.GetHashCode();
-
             if (e.RawEvent.Mask is SharpHook.Data.EventMask.LeftMeta or SharpHook.Data.EventMask.RightMeta &&
                 e.RawEvent.Keyboard.KeyCode == KeyCode.VcEnter)
             {
@@ -24,11 +24,11 @@ public static class KeyPressHandler
         }
         catch (Exception ex)
         {
-            Log.Error(ex, "An error occurred while handling key press event");
+            Log.Error(ex, $"[{hashCode}] > An error occurred while handling key press event");
         }
         finally
         {
-            Log.Debug($"[{e.GetHashCode()}] > Key Pressed: {e.RawEvent}");
+            Log.Debug($"[{hashCode}] > Key Pressed: {e.RawEvent}");
         }
     }
 }

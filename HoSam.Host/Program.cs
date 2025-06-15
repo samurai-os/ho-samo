@@ -4,9 +4,12 @@ using SharpHook.Reactive;
 
 try
 {
+    var homeDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+    Console.WriteLine($"HoSamo.Host started. Logs will be written to: {homeDir}/Library/Logs/hosam/hs-.log");
+
     Log.Logger = new LoggerConfiguration()
-        .MinimumLevel.Error()
-        .WriteTo.File("~/Library/Logs/hosam/hs-.log", rollingInterval: RollingInterval.Day)
+        .MinimumLevel.Information()
+        .WriteTo.File($"{homeDir}/Library/Logs/hosam/hs-.log", rollingInterval: RollingInterval.Day)
         .CreateLogger();
 
     Log.Information("HoSamo.Host started");

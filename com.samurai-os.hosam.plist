@@ -7,7 +7,7 @@
     <string>com.samurai-os.hosam</string>
     <key>ProgramArguments</key>
     <array>
-            <string>/Users/paulb/samurai-os-apps/hosam/HoSam.Host</string>
+            <string>/Users/paulb/.samurai-os-apps/hosam</string>
     </array>
     <key>RunAtLoad</key>
     <true/>

@@ -19,7 +19,7 @@ public static class KeyPressHandler
                 Log.Debug($"[{hashCode}] > Key Pressed: {e.RawEvent}");
                 Log.Information($"[{hashCode}] > Enter key pressed");
 
-                Process.Start("open", "-na /Applications/Alacritty.app/Contents/MacOS/alacritty");
+                Process.Start("open", "-na /Applications/Alacritty.app");
             }
         }
         catch (Exception ex)

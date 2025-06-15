@@ -3,7 +3,7 @@ using Serilog;
 using SharpHook;
 using SharpHook.Data;
 
-namespace HoSamo.Host;
+namespace HoSam.Host;
 
 public static class KeyPressHandler
 {

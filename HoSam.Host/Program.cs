@@ -1,4 +1,4 @@
-﻿using HoSamo.Host;
+﻿using HoSam.Host;
 using Serilog;
 using SharpHook.Reactive;
 
@@ -6,7 +6,7 @@ try
 {
     Log.Logger = new LoggerConfiguration()
         .MinimumLevel.Error()
-        .WriteTo.File("/tmp/HoSamo.Host/hs-.log", rollingInterval: RollingInterval.Day)
+        .WriteTo.File("~/Library/Logs/hosam/hs-.log", rollingInterval: RollingInterval.Day)
         .CreateLogger();
 
     Log.Information("HoSamo.Host started");

@@ -11,7 +11,7 @@ agentDir = ${HOME}/Library/LaunchAgents
 agentFile = ${agentDir}/com.samurai-os.hosam.plist
 
 publish:
-	dotnet publish -c Release -r osx-arm64 --self-contained true -p:PublishDir=${appPath} -p:PublishSingleFile=true -p:PublishTrimmed=true -p:EnableCompressionInSingleFile=true
+	dotnet publish -c Release --self-contained true -p:PublishDir=${appPath} -p:PublishSingleFile=true -p:PublishTrimmed=true -p:EnableCompressionInSingleFile=true
 	chmod +x ${appPath}/hosam
 	cp ./com.samurai-os.hosam.plist ${agentDir}/
 
